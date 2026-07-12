@@ -12,8 +12,13 @@ config_version=5
 
 config/name="choochoo"
 run/main_scene="uid://dxsicrxd1wi07"
-config/features=PackedStringArray("4.6", "Mobile")
+config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [physics]
 
