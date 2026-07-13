@@ -8,3 +8,6 @@ func _ready() -> void:
 
 func _button_pressed() -> void:
 	label.text = str("Button Pressed")
+
+# TODO: Implement state machine
+# https://www.gdquest.com/tutorial/godot/design-patterns/finite-state-machine/
