@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://dxsicrxd1wi07"]
 
+[ext_resource type="Script" uid="uid://bsbmmlmgeg5e4" path="res://scripts/main.gd" id="1_o5qli"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_450wo"]
 content_margin_left = 10.0
 content_margin_top = 10.0
@@ -13,6 +15,7 @@ corner_radius_bottom_left = 5
 
 [node name="MainGame" type="Node" unique_id=507025543]
 process_mode = 3
+script = ExtResource("1_o5qli")
 
 [node name="Systems" type="Node" parent="." unique_id=996028171]
 
@@ -67,12 +70,17 @@ horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="HudLayer/HudRoot/Background/HSplitContainer/PanelContainer/VBoxContainer" unique_id=1827334154]
 layout_mode = 2
-text = "Button"
+text = "Change State"
 
 [node name="VBoxContainer" type="VSplitContainer" parent="HudLayer/HudRoot/Background/HSplitContainer" unique_id=77119620]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
+
+[node name="Label" type="Label" parent="HudLayer/HudRoot/Background/HSplitContainer/VBoxContainer" unique_id=350780888]
+layout_mode = 2
+text = "Output"
+horizontal_alignment = 1
 
 [node name="PauseLayer" type="CanvasLayer" parent="." unique_id=973993023]
 
