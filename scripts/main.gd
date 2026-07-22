@@ -1,19 +1,25 @@
 extends Node
 
+var passengers: Array[Passenger]
+
+@onready var entity_root: Node2D = $World/EntityRoot
+
 func _ready() -> void:
 	var destination = get_destination()
 	print(destination)
-	var passengers = get_passengers(5)
-	print(passengers)
+	create_passengers(10)
+	for passenger in passengers:
+		print(passenger.stats)
 	pass
 
 func get_destination() -> String:
+	# Todo: Create a random destination
 	return "Alaska"
 
-func get_passengers(num: int) -> Dictionary:
-	var passengers: Dictionary
+func create_passengers(num: int) -> void:
 	for i in range(num):
-		var name: String = "Name" + str(i)
-		var age = randi_range(18, 80)
-		passengers.set(name, age)
-	return passengers
+		var passenger = Passenger.new()
+		passenger.setup()
+		passengers.append(passenger)
+		entity_root.add_child(passenger)
+	pass
